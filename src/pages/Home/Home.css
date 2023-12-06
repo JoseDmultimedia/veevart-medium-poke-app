@@ -1,0 +1,32 @@
+.o-container-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    width: 100vw;
+    height: 100vh; 
+    flex-wrap: wrap;
+}
+
+.o-input{
+    width: 200px;
+    height: 24px;
+    margin-bottom: .5rem;
+    border-radius: 2rem;   
+}
+
+.o-search-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+@media (max-width: 640px) {
+    .o-container-card-home{
+        flex-direction: column;
+    }
+
+}
+
