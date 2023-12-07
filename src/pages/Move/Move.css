@@ -1,0 +1,42 @@
+.o-body-move{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    width: 100vw;
+    height: auto; 
+    flex-wrap: wrap;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.o-container-cards-move{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    gap: 10px;
+}
+
+.o-card-move{
+    width: 150px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E1CE7A;
+    border-radius: 2rem;
+}
+
+.o-span-btn{
+    margin-bottom: 2rem;
+    font-weight: bolder;
+}
+
+.o-span-btn:hover{
+    color: red;
+    cursor: pointer;
+}
