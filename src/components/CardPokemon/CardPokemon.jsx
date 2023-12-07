@@ -8,24 +8,36 @@ function CardPokemon(props) {
   const navigate = useNavigate();
 
   const goToMovesFn = () => {
-    navigate("move", { state: { pokemon: pokemonObj } });
+    navigate("move", { state: { pokemonObj: pokemonObj } });
   };
 
   const renderMoves = () => {
+    if (!pokemonObj || !pokemonObj.moves) {
+      return null;
+    }
+
     let moves = [];
-    for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < Math.min(2, pokemonObj.moves.length); index++) {
       moves.push(
-        <p key={index} className="o-move">{pokemonObj?.moves[index]?.move.name}</p>
+        <p key={index} className="o-move">
+          {pokemonObj.moves[index]?.move.name}
+        </p>
       );
     }
     return moves;
   };
 
   const renderAbilities = () => {
+    if (!pokemonObj || !pokemonObj.abilities) {
+      return null;
+    }
+
     let abilities = [];
     for (let index = 0; index < pokemonObj.abilities.length; index++) {
       abilities.push(
-        <p key={index} className="o-move">{pokemonObj?.abilities[index]?.ability.name}</p>
+        <p key={index} className="o-move">
+          {pokemonObj.abilities[index]?.ability.name}
+        </p>
       );
     }
     return abilities;
